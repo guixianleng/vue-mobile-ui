@@ -1,0 +1,34 @@
+@import '../../../styles/variables.less';
+.pl-steps {
+  flex: 1;
+  position: relative;
+  color: #666;
+  &--line {
+    position: absolute;
+    right: 50%;
+    top: 10px;
+    width: 100%;
+    height: 1px;
+    background-color: #ebedf0;
+    z-index: 99
+  }
+  &--circle {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    background-color: #fff;
+    transform: translateX(-50%);
+    z-index: 1001;
+  }
+  &--text {
+    text-align: center;
+    padding-top: 28px;
+    font-size: 14px;
+  }
+  &--done {
+    .pl-steps--line {
+      color: @active-color;
+      background-color: @active-color;
+    }
+  }
+}

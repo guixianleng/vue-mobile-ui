@@ -1,0 +1,39 @@
+@import '../../../styles/variables.less';
+
+.pl-placeholder {
+  text-align: center;
+  background-color: #F5F5F5;
+  padding: 14px 0;
+  &--text {
+    font-size: 13px;
+    margin-top: 10px;
+    span {
+      color: #999;
+      line-height: 24px;
+    }
+  }
+  .text-b_f {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: @sub-color;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 3px;
+      background-color: #D8D8D8;
+      border-radius: 2px;
+    }
+    &::before {
+      left: -12px;
+    }
+    &::after {
+      right: -12px;
+    }
+  }
+}

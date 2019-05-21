@@ -1,0 +1,78 @@
+.pl-toast {
+  border-radius: 5px;
+  padding: 15px;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+  min-width: 120px;
+  z-index: 9999;
+  margin: auto;
+  text-align: center;
+}
+.pl-toast {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &-content {
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+    box-sizing: content-box;
+    .svg-icon {
+      margin-bottom: 10px;
+    }
+  }
+  &--text {
+    white-space: pre-wrap;
+  }
+  // toast位置样式
+  &-top {
+    top: 10%;
+  }
+  &-bottom {
+    top: 80%;
+  }
+  &-center {
+    top: 50%;
+  }
+  // mask
+  &-overlay,
+  &-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2019;
+    background-color: transparent;
+  }
+  &-loading {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+    color: #666;
+    &--content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 15px 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+    }
+  }
+  // model样式
+  &--black {
+    background: rgba(49, 49, 49, 0.7);
+    box-shadow: 0px 1px 8px 0px rgba(194, 194, 194, 0.5);
+    color: #FFF;
+  }
+  &--white {
+    background:rgba(255,255,255,1);
+    box-shadow:0px 1px 8px 0px rgba(194,194,194,0.5);
+    color: #666;
+  }
+}

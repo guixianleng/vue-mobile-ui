@@ -1,0 +1,21 @@
+.pl-step {
+  padding: 12px 0;
+  background-color: #fff;
+  display: flex;
+  overflow: hidden;
+  .pl-steps {
+    background-color: #fff;
+    &:first-child {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 20px;
+        background-color: #fff;
+        top: 0px;
+        right: 50%;
+        z-index: 1000;
+      }
+    }
+  }
+}

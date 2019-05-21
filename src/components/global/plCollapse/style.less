@@ -1,0 +1,25 @@
+@import '../../../styles/variables.less';
+.pl-collapse {
+  background-color: #fff;
+  padding: 0 10px 10px;
+  height: auto;
+  text-align: left;
+  &__content {
+    font-size: 12px;
+    line-height: 18px;
+    .ellipsis(3)
+  }
+  &__icon {
+    color: @golden-color;
+    font-size: 12px;
+    margin-top: 5px;
+    span {
+      margin-right: 3px;
+    }
+    .pl-svg-icon {
+      vertical-align: top;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import './variables.less';
+/* 扩展 button 的type样式 */
+.van-button {
+  &--large {
+    font-size: 15px!important;
+  }
+  &--brown {
+    color: @button-brown-color;
+    border: @button-border-width solid @button-brown-border-color;
+  }
+}
+
+/* van-toast */
+.van-toast {
+  &--default {
+    .van-toast__text {
+      text-align: center;
+    }
+  }
+}
+
+/* van-list */
+.van-list {
+  height: auto;
+  min-height: 80vh;
+}
+
+/* van-nav-bar */
+.van-nav-bar {
+  .van-icon {
+    font-size: 20px
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>vipc_ic_con</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="预约企业" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="H5-预约企业-未联系" transform="translate(-27.000000, -121.000000)">
+            <g id="Group-Copy-2" transform="translate(12.000000, 110.000000)">
+                <g id="vipc_ic_con" transform="translate(15.000000, 11.000000)">
+                    <circle id="Oval-8" stroke="#268AED" stroke-width="1.5" cx="7" cy="7" r="6.25"></circle>
+                    <path d="M7.81744422,5.72616633 L9.63488844,5.72616633 C10.1367618,5.72616633 10.5436105,6.13301508 10.5436105,6.63488844 C10.5436105,7.1367618 10.1367618,7.54361055 9.63488844,7.54361055 L6.90872211,7.54361055 C6.65778543,7.54361055 6.4306049,7.44189836 6.26615854,7.277452 C6.10171219,7.11300565 6,6.88582512 6,6.63488844 L6,3.90872211 C6,3.40684875 6.40684875,3 6.90872211,3 C7.41059547,3 7.81744422,3.40684875 7.81744422,3.90872211 L7.81744422,5.72616633 Z" id="Combined-Shape" fill="#268AED"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

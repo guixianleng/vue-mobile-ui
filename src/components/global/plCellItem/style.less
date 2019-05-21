@@ -1,0 +1,60 @@
+@import '../../../styles/variables.less';
+.pl-cell-item {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+  font-size: 14px;
+  &__header {
+    display: flex;
+    align-items: center;
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    .svg-icon {
+      margin-right: 4px;
+    }
+  }
+  &__title {
+    flex: 1;
+    text-align: left;
+    color: @black-color
+  }
+  .only-title {
+    text-align: center
+  }
+  &__value {
+    flex: 1;
+    text-align: right;
+    .text-right {
+      font-size: 16px;
+      color: #F89516;
+      font-weight: 500
+    }
+  }
+  &__desc {
+    line-height: 20px;
+    padding-top: 10px;
+    // .ellipsis(3)
+  }
+  &--desc {
+    flex: 1;
+    font-size: 16px;
+    .header {
+      font-weight: 600px;
+      margin-bottom: 10px;
+      .single-ellipsis();
+      .svg-icon {
+        margin: 0 5px;
+      }
+      .number {
+        color: #F89516
+      }
+    }
+    .text {
+      color: #666;
+      font-size: 12px;
+    }
+  }
+}

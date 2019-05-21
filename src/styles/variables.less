@@ -1,0 +1,43 @@
+// 黑色字体颜色
+@black-color: #313131;
+@golden-color: #BB9B6D;
+
+// 主题颜色
+@primary-color: #268AED;
+@active-color: #268AED;
+
+// 棕色
+@button-border-width: 1px;
+@button-brown-color: #BB9B6D;
+@button-brown-border-color: #BB9B6D;
+
+
+@background-color: #F5F5F5;
+@base-bgc: #F5F5F5;
+
+// 默认text字体颜色
+@text-color: #313131;
+// 辅助色
+@sub-color: #666666;
+
+// 边框颜色
+@border-base-golden: #BB9B6D;
+@border-base-color: #EEE;
+
+// 超出几行省略号
+.ellipsis(@lines, @color: #666){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  color: @color;
+  -webkit-line-clamp: @lines;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.single-ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

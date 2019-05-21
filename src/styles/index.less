@@ -1,0 +1,36 @@
+@import './reset.less';
+@import './variables.less';
+@import './animation.less';
+@import './overlay-vant.less';
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+img {
+  vertical-align: middle;
+}
+
+body {
+  color: @text-color;
+  background-color: @base-bgc;
+}
+
+// 当行超出省略
+.single-els {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 占位设置样式
+.vue-content-placeholders {
+  padding: 10px 12px;
+}
