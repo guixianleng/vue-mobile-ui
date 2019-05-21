@@ -73,13 +73,8 @@ export default {
 <style lang="less" scoped>
 .toast {
   padding: 15px;
-  .demo {
-    margin-bottom: 20px;
-  }
   h3 {
-    font-weight: 500;
     margin-bottom: 10px;
-    font-size: 15px
   }
   .van-button {
     margin-right: 15px

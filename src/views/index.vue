@@ -36,6 +36,13 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="less">
+.demo {
+  margin-bottom: 20px;
+  h3 {
+    font-weight: 500;
+    font-size: 15px;
+    margin: 10px 0;
+  }
+}
 </style>

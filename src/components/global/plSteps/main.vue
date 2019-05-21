@@ -2,9 +2,9 @@
   <div :class="classes" :style="activeStyle">
     <div class="pl-steps--line"></div>
     <div class="pl-steps--circle">
-      <pl-svg-icon :icon-class="svgName" :size="size" />
+      <pl-svg-icon :icon="svgName" :size="size" />
     </div>
-    <div class="pl-steps--text">{{value}}</div>
+    <div class="pl-steps--text">{{this.$slots.default[0].text || value}}</div>
   </div>
 </template>
 
@@ -33,16 +33,8 @@ export default {
       type: String,
       default: ''
     },
-    dotSvg: { // 默认
-      typeL: String,
-      default: 'dot-circle'
-    },
-    activeSvg: { // svg地址
-      typeL: String,
-      default: 'checked'
-    },
     size: { // svg大小
-      type: Number,
+      type: [Number, String],
       default: 14
     }
   },
@@ -54,7 +46,9 @@ export default {
       return activeFunc(this, activeClass, normalClass)
     },
     svgName () { // 定义svg图标
-      return activeFunc(this, this.activeSvg, this.dotSvg)
+      const { activeSvg, dotSvg } = this.$parent
+
+      return activeFunc(this, activeSvg, dotSvg)
     },
     activeStyle () { // 激活的行内样式
       const { activeColor } = this.$parent

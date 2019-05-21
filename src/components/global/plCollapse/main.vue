@@ -2,8 +2,8 @@
   <div class="pl-collapse">
     <div class="pl-collapse__content" v-html="value" :style="styles"></div>
     <div class="pl-collapse__icon" @click="handleTrigger" :style="toWay">
-      <span v-if="isChara">{{isTrigger ? '详细' : '收起'}}</span>
-      <pl-svg-icon :icon-class="iconName" />
+      <span v-if="isChara">{{isTrigger ? unfoldText : packUpText}}</span>
+      <pl-svg-icon :icon="iconName" />
     </div>
   </div>
 </template>
@@ -20,6 +20,14 @@ export default {
     isChara: { // 展示伸缩方式
       type: Boolean,
       default: true
+    },
+    unfoldText: {
+      type: String,
+      default: '展开'
+    },
+    packUpText: {
+      type: String,
+      default: '收起'
     }
   },
   computed: {

@@ -13,6 +13,14 @@ export default {
       type: Number,
       default: 1
     },
+    dotSvg: { // 默认
+      typeL: String,
+      default: 'dot-circle'
+    },
+    activeSvg: { // svg地址
+      typeL: String,
+      default: 'checked'
+    },
     activeColor: {
       typeL: String,
       default: '#268AED'
