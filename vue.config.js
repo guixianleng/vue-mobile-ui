@@ -6,7 +6,7 @@ const pxtorem = require('postcss-pxtorem')
 
 const path = require('path')
 const IS_PROD = process.env.NODE_ENV === 'production'
-const cdnDomian = '/'
+const cdnDomian = '/vue-mobile-ui'
 
 module.exports = {
   publicPath: IS_PROD ? cdnDomian : '/',
