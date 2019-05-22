@@ -90,7 +90,7 @@ module.exports = {
           // axios
           '//cdn.staticfile.org/axios/0.19.0-beta.1/axios.min.js',
           // vant js
-          'cdn.jsdelivr.net/npm/vant@1.6/lib/vant.min.js'
+          '//cdn.jsdelivr.net/npm/vant@1.6/lib/vant.min.js'
         ]
       }
       config.plugin('html')
