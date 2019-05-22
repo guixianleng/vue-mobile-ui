@@ -30,6 +30,8 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "grunt-contrib-imagemin": "^3.1.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-pngquant": "^7.0.0",
     "img-loader": "^3.0.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
