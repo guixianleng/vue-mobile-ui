@@ -69,35 +69,35 @@ module.exports = {
 
       // 忽略生成环境打包的文件
 
-      // var externals = {
-      //   vue: 'Vue',
-      //   axios: 'axios',
-      //   'vant': 'vant',
-      //   'vue-router': 'VueRouter',
-      //   vuex: 'Vuex'
-      // }
-      // config.externals(externals)
-      // const cdn = {
-      //   css: [
-      //     // vant css
-      //     '//cdn.jsdelivr.net/npm/vant@1.6/lib/index.css'
-      //   ],
-      //   js: [
-      //     // vue
-      //     '//cdn.staticfile.org/vue/2.5.22/vue.min.js',
-      //     // vue-router
-      //     '//cdn.staticfile.org/vue-router/3.0.2/vue-router.min.js',
-      //     // axios
-      //     '//cdn.staticfile.org/axios/0.19.0-beta.1/axios.min.js',
-      //     // vant js
-      //     '//cdn.jsdelivr.net/npm/vant@1.6/lib/vant.min.js'
-      //   ]
-      // }
-      // config.plugin('html')
-      //   .tap(args => {
-      //     args[0].cdn = cdn
-      //     return args
-      //   })
+      var externals = {
+        vue: 'Vue',
+        axios: 'axios',
+        'vant': 'vant',
+        'vue-router': 'VueRouter',
+        vuex: 'Vuex'
+      }
+      config.externals(externals)
+      const cdn = {
+        css: [
+          // vant css
+          '//cdn.jsdelivr.net/npm/vant@1.6/lib/index.css'
+        ],
+        js: [
+          // vue
+          '//cdn.staticfile.org/vue/2.5.22/vue.min.js',
+          // vue-router
+          '//cdn.staticfile.org/vue-router/3.0.2/vue-router.min.js',
+          // axios
+          '//cdn.staticfile.org/axios/0.19.0-beta.1/axios.min.js',
+          // vant js
+          '//cdn.jsdelivr.net/npm/vant@1.6/lib/vant.min.js'
+        ]
+      }
+      config.plugin('html')
+        .tap(args => {
+          args[0].cdn = cdn
+          return args
+        })
 
       // 分析打包体积
       if (process.env.IS_ANALYZE) {
@@ -143,7 +143,7 @@ module.exports = {
       }
     }
   },
-  lintOnSave: process.env.NODE_ENV === 'development',
+  lintOnSave: process.env.NODE_ENV === 'production',
   devServer: {
     // 自动打开默认浏览器
     open: true,
