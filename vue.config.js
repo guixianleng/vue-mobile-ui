@@ -72,7 +72,7 @@ module.exports = {
       var externals = {
         vue: 'Vue',
         axios: 'axios',
-        'vant': 'vant',
+        'vant': 'VANT',
         'vue-router': 'VueRouter',
         vuex: 'Vuex'
       }
