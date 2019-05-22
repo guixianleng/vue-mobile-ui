@@ -6,7 +6,7 @@ const pxtorem = require('postcss-pxtorem')
 
 const path = require('path')
 const IS_PROD = process.env.NODE_ENV === 'production'
-const cdnDomain = '/'
+const cdnDomain = './'
 
 module.exports = {
   publicPath: IS_PROD ? cdnDomain : '/',
