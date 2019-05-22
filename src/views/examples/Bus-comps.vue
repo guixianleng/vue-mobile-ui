@@ -19,7 +19,7 @@
         <div slot="header">
           <span>名称: <i>LenGxin</i></span>
           <span>项目名称: <i>vue-mobile-components</i></span>
-          <span class="single-els">项目地址: <i><a href="https://guixianleng.github.io/vue-mobile-ui">快猛戳我</a></i></span>
+          <span class="single-els">项目地址: <i>https://github.com/guixianleng/vue-mobile-ui</i></span>
         </div>
         <div slot="footer" class="footer-class">
           <span>上传时间: 2019-05-22</span>
