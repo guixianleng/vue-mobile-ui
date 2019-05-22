@@ -13,13 +13,17 @@
     <div class="demo">
       <h3>列表panel</h3>
       <pl-panel
-        icon="refresh"
-        status="刷新"
+        icon="disconnect"
+        status="未完待续"
         :time="currTime">
-        <div slot="header">头部区域内容</div>
+        <div slot="header">
+          <span>名称: <i>LenGxin</i></span>
+          <span>项目名称: <i>vue-mobile-components</i></span>
+          <span class="single-els">项目地址: <i><a href="https://guixianleng.github.io/vue-mobile-ui">快猛戳我</a></i></span>
+        </div>
         <div slot="footer" class="footer-class">
-          <div>预约时间: 2019-05-01</div>
-          <div>联系方式: 13512345678</div>
+          <span>上传时间: 2019-05-22</span>
+          <span>兴趣爱好: 欢迎吐槽</span>
         </div>
       </pl-panel>
     </div>
@@ -66,6 +70,15 @@ export default {
   .demo {
     h3 {
       margin-left: 10px;
+    }
+  }
+  .pl-panel {
+    span {
+      display: block;
+      line-height: 28px;
+    }
+    i {
+      color: #268AED
     }
   }
   .footer-class {
