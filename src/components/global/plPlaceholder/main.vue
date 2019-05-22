@@ -5,9 +5,9 @@
       <pl-svg-icon v-if="icon" :icon="icon" :size="size" />
     </div>
     <div :class="['pl-placeholder--text', textClass]">
-      <slot v-if="$slots.text" name="text"></slot>
+      <slot v-if="$slots.message" name="message"></slot>
       <template v-else>
-        <span>{{text}}</span>
+        <span>{{message}}</span>
       </template>
     </div>
   </div>
@@ -26,7 +26,7 @@ export default {
       type: String,
       default: ''
     },
-    text: {
+    message: {
       type: String,
       default: '暂无数据'
     },

@@ -16,6 +16,7 @@
     <div class="demo">
       <h3>加载提示</h3>
       <van-button type="default" @click="handleLoading">加载提示</van-button>
+      <van-button type="default" @click="handleLoading('no')">无加载文案提示</van-button>
     </div>
     <div class="demo">
       <h3>成功/失败提示</h3>
@@ -59,10 +60,11 @@ export default {
         text: '程序猿正在努力开发中'
       })
     },
-    handleLoading () {
+    handleLoading (index) {
+      const msg = index === 'no' ? '' : '加载中...'
       this.$vueToast({
         type: 'loading',
-        message: '加载中...',
+        message: msg,
         isClose: true
       })
     }
@@ -72,7 +74,7 @@ export default {
 
 <style lang="less" scoped>
 .toast {
-  padding: 15px;
+  padding: 0 15px;
   h3 {
     margin-bottom: 10px;
   }

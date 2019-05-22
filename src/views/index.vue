@@ -3,11 +3,13 @@
     <van-nav-bar
       :title="$route.meta.title"
       :left-arrow="isShow"
+      fixed
       @click-left="handleBack">
        <router-link target="_blank" :to="$route.meta.link" slot="right" v-if="isShow">
          <pl-svg-icon icon="edit" size="20" />
        </router-link>
     </van-nav-bar>
+    <div class="divide"></div>
     <router-view></router-view>
   </div>
 </template>
@@ -37,6 +39,9 @@ export default {
 </script>
 
 <style lang="less">
+.divide {
+  margin-top: 60px;
+}
 .demo {
   margin-bottom: 20px;
   h3 {
