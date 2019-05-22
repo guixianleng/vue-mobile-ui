@@ -6,16 +6,15 @@ const pxtorem = require('postcss-pxtorem')
 
 const path = require('path')
 const IS_PROD = process.env.NODE_ENV === 'production'
-const cdnDomian = '/vue-mobile-ui'
+const cdnDomain = '/'
 
 module.exports = {
-  publicPath: IS_PROD ? cdnDomian : '/',
+  publicPath: IS_PROD ? cdnDomain : '/',
   configureWebpack: () => ({
     devtool: 'source-map',
     resolve: {
       // 配置项目别名
       alias: {
-        '~styles': path.resolve('./src/styles'),
         'assets': path.resolve('./src/assets'),
         'components': path.resolve('./src/components'),
         'utils': path.resolve('./src/utils'),
