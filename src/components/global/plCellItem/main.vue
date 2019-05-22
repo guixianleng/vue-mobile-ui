@@ -1,17 +1,18 @@
 <template>
-  <component :is="tag" class="pl-cell-item" @click="handleLink">
+  <component :is="tag" class="pl-cell-item" @click.stop="handleLink">
     <div class="pl-cell-item__header">
       <div class="icon-img" v-if="isUrl">
         <img :src="src" alt="image" v-if="src">
-        <pl-svg-icon :icon="svg" v-if="svg" :size="size" />
+        <pl-svg-icon :icon="icon" v-if="icon" :size="size" />
       </div>
       <div
         v-if="title"
-        :class="['pl-cell-item__title', horizClass, classes.titleClass]"
+        :style="alignWay"
+        :class="['pl-cell-item__title', classes.titleClass]"
         v-html="title">
       </div>
       <!-- 左侧插槽 -->
-      <div v-if="$slots.desc" style="width: 90%">
+      <div v-if="$slots.desc" style="max-width: 80%">
         <slot name="desc"></slot>
       </div>
       <!-- 右侧内容 -->
@@ -24,6 +25,9 @@
       <!-- 右侧的插槽 -->
       <div v-if="$slots.right" class="pl-cell-item__value">
         <slot name="right"></slot>
+      </div>
+      <div v-if="isLink && !$slots.right" class="pl-cell-item__value">
+        <pl-svg-icon icon="arrow-right" size="18" />
       </div>
     </div>
     <div class="pl-cell-item__desc" v-if="desc" v-html="desc"></div>
@@ -43,7 +47,7 @@ export default {
       type: String,
       default: ''
     },
-    svg: { // svg名称
+    icon: { // svg名称
       type: String,
       default: ''
     },
@@ -72,15 +76,18 @@ export default {
       default: ''
     },
     itemIndex: Number, // 第n个cell-item
-    titlehorize: { // 标题水平方向位置, 默认居左
-      type: Boolean,
-      default: true
+    titleAlign: { // 标题水平方向位置, 默认居左
+      type: String,
+      default: 'left'
     },
     isLink: {
       type: Boolean,
       default: false
     },
-    to: String // 跳转地址
+    to: { // 跳转地址
+      type: String,
+      default: ''
+    }
   },
   computed: {
     classes () { // 修改样式
@@ -90,10 +97,12 @@ export default {
       }
     },
     isUrl () { // 是否显示图片或者svg或者icon
-      return this.src || this.svg
+      return this.src || this.icon
     },
-    horizClass () { // 只有标题的时候设置居中
-      return this.titlehorize ? '' : 'only-title'
+    alignWay () { // 只有标题的时候设置居中
+      return {
+        textAlign: this.titleAlign
+      }
     }
   },
   methods: {

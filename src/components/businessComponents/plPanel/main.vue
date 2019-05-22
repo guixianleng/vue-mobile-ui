@@ -2,7 +2,7 @@
   <div class="pl-panel" @click="handleClick(item)" :item="item">
     <pl-cell-group>
       <pl-cell-item
-        :svg="svg"
+        :icon="icon"
         :title="status"
         :size="size"
         :value="time"
@@ -21,7 +21,7 @@
 export default {
   name: 'pl-panel',
   props: {
-    svg: { // svg地址
+    icon: { // svg地址
       type: String,
       default: ''
     },

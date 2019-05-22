@@ -149,7 +149,7 @@ module.exports = {
     open: true,
     hot: true,
     // 设置端口
-    port: 9527,
+    port: 9530,
     https: false,
     hotOnly: false,
     // 设置单个代理

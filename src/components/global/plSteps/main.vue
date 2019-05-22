@@ -1,10 +1,10 @@
 <template>
-  <div :class="classes" :style="activeStyle">
-    <div class="pl-steps--line"></div>
+  <div class="pl-steps" :style="activeStyle">
+    <div class="pl-steps--line" :style="lineActive"></div>
     <div class="pl-steps--circle">
       <pl-svg-icon :icon="svgName" :size="size" />
     </div>
-    <div class="pl-steps--text">{{this.$slots.default[0].text || value}}</div>
+    <div class="pl-steps--text">{{ labelName }}</div>
   </div>
 </template>
 
@@ -12,17 +12,17 @@
 
 /**
  * that 实例对象
- * x 激活的行为
- * y 默认行为
+ * activeBehavior 激活的行为
+ * defaultBehavior 默认行为
  */
-const activeFunc = (that, x, y = {}) => {
+const activeFunc = (that, activeBehavior, defaultBehavior = {}) => {
   const index = that.$parent.steps.indexOf(that)
   const { active } = that.$parent
 
   if (index <= active) {
-    return x
+    return activeBehavior
   } else {
-    return y
+    return defaultBehavior
   }
 }
 
@@ -39,21 +39,15 @@ export default {
     }
   },
   computed: {
-    classes () { // 样式高亮
-      const activeClass = ['pl-steps', 'pl-steps--done']
-      const normalClass = ['pl-steps']
-
-      return activeFunc(this, activeClass, normalClass)
-    },
     svgName () { // 定义svg图标
       const { activeSvg, dotSvg } = this.$parent
 
       return activeFunc(this, activeSvg, dotSvg)
     },
     activeStyle () { // 激活的行内样式
-      const { activeColor } = this.$parent
+      const { activeTextColor } = this.$parent
       const style = {
-        color: activeColor,
+        color: activeTextColor,
         fontWeight: 600
       }
       const index = this.$parent.steps.indexOf(this)
@@ -63,6 +57,23 @@ export default {
         return style
       } else {
         return {}
+      }
+    },
+    lineActive () { // 线条样式高亮
+      const { activeLineColor } = this.$parent
+      let lineActStyle = {
+        backgroundColor: activeLineColor
+      }
+      let lineActdefault = {
+        backgroundColor: '#ebedf0'
+      }
+      return activeFunc(this, lineActStyle, lineActdefault)
+    },
+    labelName () { // 标签内容
+      if (this.$slots.default) {
+        return this.$slots.default[0].text
+      } else {
+        return this.value
       }
     }
   },

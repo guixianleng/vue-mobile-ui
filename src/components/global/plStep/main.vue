@@ -21,7 +21,11 @@ export default {
       typeL: String,
       default: 'checked'
     },
-    activeColor: {
+    activeTextColor: {
+      typeL: String,
+      default: '#268AED'
+    },
+    activeLineColor: {
       typeL: String,
       default: '#268AED'
     }

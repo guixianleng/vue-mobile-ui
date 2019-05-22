@@ -2,15 +2,25 @@
   <div class="collapse">
     <div class="demo">
       <h3>基本用法</h3>
-      <pl-collapse :value="desc" :isChara="false" />
+      <pl-collapse
+        :value="desc"
+        :isChara="false"
+      />
     </div>
     <div class="demo">
       <h3>文字方式</h3>
-      <pl-collapse :value="desc" />
+      <pl-collapse
+        :value="desc"
+      />
     </div>
     <div class="demo">
-      <h3>自定义文字</h3>
-      <pl-collapse :value="desc" unfoldText="详细" packUpText="回收" />
+      <h3>自定义文字和位置</h3>
+      <pl-collapse
+        :value="desc"
+        align="right"
+        unfoldText="详细"
+        packUpText="挂起"
+      />
     </div>
   </div>
 </template>

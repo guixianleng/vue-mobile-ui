@@ -2,7 +2,7 @@
   <div class="step">
     <div class="demo">
       <h3>基本用法</h3>
-      <pl-step :active="active" active-color="#313131">
+      <pl-step :active="active" active-text-color="#313131">
         <pl-steps>预约成功</pl-steps>
         <pl-steps>预约专家</pl-steps>
         <pl-steps>正在服务</pl-steps>
@@ -11,8 +11,13 @@
       <van-button type="default" @click="handleNext">下一步</van-button>
     </div>
     <div class="demo">
-      <h3>自定义样式</h3>
-      <pl-step :active="active" active-color="#0cedb8" activeSvg="done_1">
+      <h3>自定义样式和图标</h3>
+      <pl-step
+        :active="active"
+        active-text-color="#0cedb8"
+        active-line-color="#0cedb8"
+        active-svg="done_1"
+        dot-svg="dot">
         <pl-steps>买家下单</pl-steps>
         <pl-steps>商家接单</pl-steps>
         <pl-steps>买家提货</pl-steps>

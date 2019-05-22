@@ -3,7 +3,7 @@
     <div class="pl-collapse__content" v-html="value" :style="styles"></div>
     <div class="pl-collapse__icon" @click="handleTrigger" :style="toWay">
       <span v-if="isChara">{{isTrigger ? unfoldText : packUpText}}</span>
-      <pl-svg-icon :icon="iconName" />
+      <pl-svg-icon :icon="iconName" size="12" />
     </div>
   </div>
 </template>
@@ -28,6 +28,10 @@ export default {
     packUpText: {
       type: String,
       default: '收起'
+    },
+    align: { // 位置
+      type: String,
+      default: ''
     }
   },
   computed: {
@@ -41,7 +45,7 @@ export default {
     },
     toWay () { // 文字收缩样式
       return {
-        'text-align': this.isChara ? 'left' : 'center'
+        'text-align': !this.isChara ? 'center' : this.align ? this.align : 'left'
       }
     }
   },

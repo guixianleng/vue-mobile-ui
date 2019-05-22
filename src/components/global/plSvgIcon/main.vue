@@ -17,7 +17,7 @@ export default {
     },
     size: { // svg大小
       type: [Number, String],
-      default: 12
+      default: 18
     }
   },
   computed: {
