@@ -4,13 +4,15 @@
       <h3>基本用法</h3>
       <pl-collapse
         :value="desc"
-        :isChara="false"
+        align="center"
       />
     </div>
     <div class="demo">
       <h3>文字方式</h3>
       <pl-collapse
         :value="desc"
+        type="character"
+        align="left"
       />
     </div>
     <div class="demo">
@@ -18,8 +20,9 @@
       <pl-collapse
         :value="desc"
         align="right"
-        unfoldText="详细"
-        packUpText="挂起"
+        type="character"
+        unfold-text="详细"
+        fold-text="挂起"
       />
     </div>
   </div>
