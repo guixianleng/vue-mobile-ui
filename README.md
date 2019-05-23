@@ -14,10 +14,10 @@
 
 |       方法名      |          参数        |    返回值  |      介绍      |
 |----------------|----------------------|------------|----------------|
-| Toast          | `options | message`  | toast 实例 | 展示提示       |
-| Toast.loading  | `options | message`  | toast 实例 | 展示加载提示   |
-| Toast.success  | `options | message`  | toast 实例 | 展示成功提示   |
-| Toast.fail     | `options | message`  | toast 实例 | 展示失败提示   |
+| Toast          | `options/message`  | toast 实例 | 展示提示       |
+| Toast.loading  | `options/message`  | toast 实例 | 展示加载提示   |
+| Toast.success  | `options/message`  | toast 实例 | 展示成功提示   |
+| Toast.fail     | `options/message`  | toast 实例 | 展示失败提示   |
 | Toast.close    | `close: Boolean`     | `Void`     | 关闭提示       |
 
 #### Options
