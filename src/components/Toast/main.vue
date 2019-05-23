@@ -21,10 +21,15 @@
     <div
       v-show="isLoading"
       class="pl-toast-loading"
+      :style="backgroundStyle"
       :key="3">
-      <div class="pl-toast-loading--content">
-        <pl-svg-icon :icon="svgIcon" :size="70" />
-        <div v-html="htmlRender"></div>
+      <div class="pl-toast-loading--content" :class="clazz">
+        <pl-svg-icon
+          :icon="svgIcon"
+          :size="mergedOptions.size"
+          :animation="mergedOptions.animation"
+          :animationName="mergedOptions.animationName" />
+        <div v-html="htmlRender" v-if="mergedOptions.message" class="pl-toast-loading--msg"></div>
       </div>
     </div>
   </transition-group>
@@ -35,18 +40,22 @@
 const defaultOptions = {
   id: 'pl-toast',
   className: '',
-  toastPosition: 'center', // top, center, bottom
+  position: 'middle', // top, middle, bottom
   parent: 'body',
   transition: 'fade', // slide-down, slide-up, slide-left, slide-right
   duration: 2000,
   message: '',
-  type: 'text', // text, html, normal, colorful, loading, close
+  type: 'text', // text, html, normal, colorful, loading, close, success, fail
   title: '',
   text: '',
-  bgStyle: 'black', // black white
+  background: 'rgba(0, 0, 0, 0.3)',
+  bgContent: 'black', // black white transparent
   color: '#F89516', // 文案颜色
   colorText: '', // 色彩文案
   mask: true,
+  size: 48, // 加载图标大小
+  animation: false, // 是否开启加载动画
+  animationName: '', // 加载动画名
   icon: '', // icon图标
   isClose: false // 是否允许主动关闭加载
 }
@@ -66,11 +75,16 @@ export default {
     mergedOptions () {
       return Object.assign({}, defaultOptions, this.option)
     },
+    backgroundStyle () {
+      return {
+        backgroundColor: this.mergedOptions.background
+      }
+    },
     clazz () { // 控制样式
       let clazz = []
       let className = this.option.className
-      let toastPosition = this.mergedOptions.toastPosition
-      let bgStyle = this.mergedOptions.bgStyle
+      let position = this.mergedOptions.position
+      let bgContent = this.mergedOptions.bgContent
       let type = this.mergedOptions.type
 
       if (className) {
@@ -81,11 +95,11 @@ export default {
           clazz = clazz.concat(className)
         }
       }
-      if (toastPosition) {
-        clazz.push(`pl-toast-${toastPosition}`)
+      if (position) {
+        clazz.push(`pl-toast-${position}`)
       }
-      if (bgStyle) {
-        clazz.push(`pl-toast--${bgStyle}`)
+      if (bgContent) {
+        clazz.push(`pl-toast--${bgContent}`)
       }
       if (type === 'text') {
         clazz.push(`pl-toast--text`)
@@ -94,8 +108,8 @@ export default {
     },
     svgIcon () {
       let type = this.mergedOptions.type
-      if (this.icon) {
-        return this.icon
+      if (this.mergedOptions.icon) {
+        return this.mergedOptions.icon
       } else {
         switch (type) {
           case 'success':

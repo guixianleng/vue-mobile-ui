@@ -15,8 +15,12 @@
     </div>
     <div class="demo">
       <h3>加载提示</h3>
-      <van-button type="default" @click="handleLoading">加载提示</van-button>
-      <van-button type="default" @click="handleLoading('no')">无加载文案提示</van-button>
+      <h3>加载基本用法</h3>
+      <van-button type="default" @click="handleLoading1">加载提示</van-button>
+      <h3>自定义遮盖层背景、内容提示背景和图标</h3>
+      <van-button type="default" @click="handleLoading2">更改内容背景</van-button>
+      <van-button type="default" @click="handleLoading3">更改加载图标</van-button>
+      <van-button type="default" @click="handleLoading4">更改遮盖层背景</van-button>
     </div>
     <div class="demo">
       <h3>成功/失败提示</h3>
@@ -50,7 +54,7 @@ export default {
         type: 'colorful',
         title: '领取成功',
         colorText: '+30积分',
-        bgStyle: 'white'
+        bgContent: 'white'
       })
     },
     handleTitle () {
@@ -60,12 +64,35 @@ export default {
         text: '程序猿正在努力开发中'
       })
     },
-    handleLoading (index) {
-      const msg = index === 'no' ? '' : '加载中...'
+    handleLoading1 () {
       this.$vueToast({
         type: 'loading',
-        message: msg,
+        message: '加载中',
         isClose: true
+      })
+    },
+    handleLoading2 () {
+      this.$vueToast({
+        type: 'loading',
+        isClose: true,
+        bgContent: 'white'
+      })
+    },
+    handleLoading3 () {
+      this.$vueToast({
+        type: 'loading',
+        isClose: true,
+        animation: true,
+        size: 48,
+        animationName: 'v-loading',
+        icon: 'v_loading'
+      })
+    },
+    handleLoading4 () {
+      this.$vueToast({
+        type: 'loading',
+        isClose: true,
+        background: 'rgba(249, 120, 39, 0.2)'
       })
     }
   }
@@ -75,11 +102,15 @@ export default {
 <style lang="less" scoped>
 .toast {
   padding: 0 15px;
-  h3 {
-    margin-bottom: 10px;
+  .demo {
+    margin-bottom: 5px;
   }
   .van-button {
-    margin-right: 15px
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  .moni {
+    background-color: transparent;
   }
 }
 </style>

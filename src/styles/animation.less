@@ -125,3 +125,19 @@
     animation: slide-right-leave .3s both ease;
   }
 }
+
+
+// 加载图标动画
+.v-loading {
+  animation: load 1.5s linear infinite;
+}
+
+@keyframes load {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

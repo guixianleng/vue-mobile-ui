@@ -30,8 +30,15 @@
       <div class="svgs">
         <pl-svg-icon icon="empty" size="64"></pl-svg-icon>
         <pl-svg-icon icon="loading" size="64"></pl-svg-icon>
+        <pl-svg-icon icon="v_loading" size="32"></pl-svg-icon>
         <pl-svg-icon icon="success" size="48"></pl-svg-icon>
         <pl-svg-icon icon="fail" size="48"></pl-svg-icon>
+      </div>
+    </div>
+    <div class="demo">
+      <h3>自定义动画</h3>
+      <div class="svgs">
+        <pl-svg-icon icon="v_loading" size="32" animation animation-name="v-loading"></pl-svg-icon>
       </div>
     </div>
   </div>
