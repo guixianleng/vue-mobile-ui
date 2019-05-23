@@ -11,7 +11,7 @@ export default {
   props: {
     active: {
       type: Number,
-      default: 1
+      default: 0
     },
     dotSvg: { // 默认
       typeL: String,
