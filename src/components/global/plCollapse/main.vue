@@ -2,7 +2,7 @@
   <div class="pl-collapse">
     <div class="pl-collapse__content" v-html="value" :style="styles"></div>
     <div class="pl-collapse__icon" @click="handleTrigger" :style="toWay">
-      <span v-if="type === 'character'">{{isTrigger ? unfoldText : packUpText}}</span>
+      <span v-if="type === 'character'">{{isTrigger ? unfoldText : foldText}}</span>
       <pl-svg-icon :icon="iconName" size="12" />
     </div>
   </div>
