@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import vueToast from './main.vue'
-import { isObj, isInDocument } from '@/utils'
+import { isObj, isInDocument } from '../../utils'
 
 const parseOptions = message => (isObj(message) ? message : { message })
 

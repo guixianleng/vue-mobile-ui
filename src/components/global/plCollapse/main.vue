@@ -9,9 +9,13 @@
 </template>
 
 <script>
+import plSvgIcon from '../plSvgIcon'
 
 export default {
   name: 'pl-collapse',
+  components: {
+    plSvgIcon
+  },
   props: {
     value: {
       type: String,
