@@ -2,35 +2,23 @@ const path = require('path')
 
 module.exports = {
   base:'/pl-ui/',
-  title: 'Pl-Ui',
+  title: '移动端Ui组件库',
   description: 'This is for Poly',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   themeConfig: {
+    lastUpdated: 'Last Updated', // string | boolean
     nav: [
-      { text: 'Home', link: '/' },
+      { text: '主页', link: '/' },
       { text: 'Github', link: 'https://github.com/guixianleng/pl-ui/' },
     ],
     sidebar: [
       {
-        title: '指南',
+        title: '组件库',
         collapsable: false,
         children: [
-          'views/guide/'
-        ]
-      },
-      // {
-      //   title: '主题',
-      //   collapsable: true,
-      //   children: [
-      //     'views/theme/',
-      //   ]
-      // },
-      {
-        title: '组件',
-        collapsable: true,
-        children: [
+          'views/guide/',
           'views/components/toast/',
           'views/components/step/',
           'views/components/svg-icon/',
@@ -38,6 +26,7 @@ module.exports = {
         ]
       }
     ]
+    // sidebar: 'auto'
   },
   configureWebpack: {
     resolve: {

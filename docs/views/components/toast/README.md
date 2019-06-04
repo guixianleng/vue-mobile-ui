@@ -1,4 +1,11 @@
 ### Toast
+
+#### 实现效果
+
+<demo-code>
+  <Toast slot="code" />
+</demo-code>
+
 #### 基本用法
 ```js
 Toast('提示文案');

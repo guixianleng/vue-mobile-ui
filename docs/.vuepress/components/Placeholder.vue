@@ -12,13 +12,9 @@
 </template>
 
 <script>
-import plPlaceholder from '../../../src/components/global/plPlaceholder'
 
 export default {
-  name: 'placeholder',
-  components: {
-    'pl-placeholder': plPlaceholder
-  }
+  name: 'placeholder'
 }
 </script>
 

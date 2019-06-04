@@ -1,5 +1,11 @@
 ### Step
 
+#### 实现效果
+
+<demo-code>
+  <Step slot="code" />
+</demo-code>
+
 #### API
 
 |       参数      |         说明        |    类型  |      默认值    |
@@ -9,6 +15,3 @@
 | dot-svg           | 自定义未激活状态底部图标，详见svg组件| `String` | `dot-circle`|
 | active-text-color | 自定义激活状态颜色               | `String` | `#268AED`   |
 | active-line-color | 自定义激活线束颜色               | `String` | `#268AED`   |
-
-#### 效果
-<Step />

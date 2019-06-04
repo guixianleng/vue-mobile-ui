@@ -14,6 +14,7 @@
         <pl-svg-icon icon="v_loading" size="32"></pl-svg-icon>
         <pl-svg-icon icon="success" size="48"></pl-svg-icon>
         <pl-svg-icon icon="fail" size="48"></pl-svg-icon>
+        <pl-svg-icon icon="arrow-d"></pl-svg-icon>
       </div>
     </div>
     <div class="demo">
@@ -26,14 +27,10 @@
 </template>
 
 <script>
-import plSvgIcon from '../../../src/components/global/plSvgIcon'
 import svgIcons from '../../../src/views/js/svg-icons'
 
 export default {
   name: 'svg-icon',
-  components: {
-    'pl-svg-icon': plSvgIcon
-  },
   data () {
     return {
       svgIcons

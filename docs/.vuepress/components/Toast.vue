@@ -2,30 +2,30 @@
   <div class="toast">
     <div class="demo">
       <h3>文字提示</h3>
-      <van-button type="default" @click="$vueToast(text)">文字提示</van-button>
-      <van-button type="default" @click="$vueToast(longText)">长文字提示</van-button>
+      <van-button type="default" size="small" @click="$vueToast(text)">文字提示</van-button>
+      <van-button type="default" size="small" @click="$vueToast(longText)">长文字提示</van-button>
     </div>
     <div class="demo">
       <h3>颜色文字提示</h3>
-      <van-button type="default" @click="handleColorful">颜色文字提示</van-button>
+      <van-button type="default" size="small" @click="handleColorful">颜色文字提示</van-button>
     </div>
     <div class="demo">
       <h3>标题和内容文字提示</h3>
-      <van-button type="default" @click="handleTitle">标题和内容文字提示</van-button>
+      <van-button type="default" size="small" @click="handleTitle">标题和内容文字提示</van-button>
     </div>
     <div class="demo">
       <h3>加载提示</h3>
       <h3>加载基本用法</h3>
-      <van-button type="default" @click="handleLoading1">加载提示</van-button>
+      <van-button type="default" size="small" @click="handleLoading1">加载提示</van-button>
       <h3>自定义遮盖层背景、内容提示背景和图标</h3>
-      <van-button type="default" @click="handleLoading2">更改内容背景</van-button>
-      <van-button type="default" @click="handleLoading3">更改加载图标</van-button>
-      <van-button type="default" @click="handleLoading4">更改遮盖层背景</van-button>
+      <van-button type="default" size="small" @click="handleLoading2">更改内容背景</van-button>
+      <van-button type="default" size="small" @click="handleLoading3">更改加载图标</van-button>
+      <van-button type="default" size="small" @click="handleLoading4">更改遮盖层背景</van-button>
     </div>
     <div class="demo">
       <h3>成功/失败提示</h3>
-      <van-button type="default" @click="$vueToast.success(successText)">成功提示</van-button>
-      <van-button type="default" @click="$vueToast.fail(failText)">失败提示</van-button>
+      <van-button type="default" size="small" @click="$vueToast.success(successText)">成功提示</van-button>
+      <van-button type="default" size="small" @click="$vueToast.fail(failText)">失败提示</van-button>
     </div>
   </div>
 </template>
@@ -97,9 +97,9 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .toast {
-  padding: 0 15px;
+  padding: 0 10px;
   .demo {
     margin-bottom: 5px;
   }
@@ -107,8 +107,8 @@ export default {
     margin-right: 15px;
     margin-bottom: 10px;
   }
-  .moni {
-    background-color: transparent;
-  }
+}
+.pl-toast--text {
+  white-space: normal!important
 }
 </style>

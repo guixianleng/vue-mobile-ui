@@ -1,5 +1,11 @@
 ### Collapse
 
+#### 实现效果
+
+<demo-code>
+  <Collapse slot="code" />
+</demo-code>
+
 #### API
 |       参数      |         说明        |    类型  |      默认值    |
 |-----------------|---------------------|----------|----------------|
@@ -8,6 +14,3 @@
 | align           | 展开动作的位置`left` `right`   | `String`       | `center`|
 | unfold-text     | 展开描述文字                   | `String`       | `展开`  |
 | fold-text       | 折叠描述文字                   | `String`       | `收起`  |
-
-#### 实现效果
-<Collapse />

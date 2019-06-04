@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import plSvgIcon from '../plSvgIcon'
+// import plSvgIcon from '../plSvgIcon'
 
 /**
  * that 实例对象
@@ -30,7 +30,7 @@ const activeFunc = (that, activeBehavior, defaultBehavior = {}) => {
 export default {
   name: 'pl-steps',
   components: {
-    plSvgIcon
+    // plSvgIcon
   },
   props: {
     value: { // 文本
