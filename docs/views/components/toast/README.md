@@ -1,23 +1,8 @@
-### Toast
+### Toast 轻提示
 
-#### 实现效果
+<Toast />
 
-<demo-code>
-  <Toast slot="code" />
-</demo-code>
-
-#### 基本用法
-```js
-Toast('提示文案');
-Toast({
-  type: 'loading',
-  message: '加载中...'
-});
-Toast.success('成功文案');
-Toast.fail('失败文案');
-```
-
-#### 方法
+### Methods
 |       方法名      |          参数        |    返回值  |      介绍      |
 |----------------|----------------------|------------|----------------|
 | Toast          | `options/message`  | toast 实例 | 展示提示       |
@@ -26,7 +11,7 @@ Toast.fail('失败文案');
 | Toast.fail     | `options/message`  | toast 实例 | 展示失败提示   |
 | Toast.close    | `close: Boolean`     | `Void`     | 关闭提示       |
 
-#### Options
+### Options
 |       参数    |                                   说明                                   |   类型   | 默认值 |
 |---------------|--------------------------------------------------------------------------|----------|--------|
 | type     |提示类型，可选值为`loading` `success` `fail` `close` `normal` `colorful` `html`| `String` | `text` |

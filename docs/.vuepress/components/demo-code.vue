@@ -1,7 +1,7 @@
 <template>
   <div class="pl-container">
     <div class="content-box">
-      <slot name="code"></slot>  
+      <slot v-if="$slots.default"></slot>  
     </div> 
   </div>
 </template>
@@ -16,8 +16,10 @@ export default {
 <style lang="less">
 .pl-container {
   background: url('../../static/images/iphone.png') no-repeat center top;
-  padding-top: 90px;
+  padding: 90px 27px 0;
   height: 680px;
+  background-size: contain;
+  margin-top: 15px;
   .content-box {
     width: 320px;
     height: 575px;
@@ -30,11 +32,6 @@ export default {
     margin: 10px;
     font-weight: 600;
     font-size: 15px;
-  }
-}
-@media screen and (max-width: 420px) {
-  .pl-container {
-    background-size: contain;
   }
 }
 </style>

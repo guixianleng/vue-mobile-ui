@@ -27,13 +27,17 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
+<style lang="less">
 .card {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 0 3px 0 #ccc;
   margin-bottom: 10px;
+  margin-top: 15px;
+  h2 {
+    font-size: 18px;
+  }
   .card-content {
     padding: 10px;
     border-bottom: 1px solid #ccc;
@@ -46,7 +50,10 @@ export default {
     cursor: pointer;
   }
   pre {
-    // background-color: rgb(221, 245, 210);
+    // background-color: #f5f5f5;
+    code {
+      font-size: 14px;
+    }
   }
 }
 </style>

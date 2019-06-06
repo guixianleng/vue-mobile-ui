@@ -1,6 +1,6 @@
-### Collapse 伸缩
+### Cell 单元格
 
-<Collapse />
+<cell />
 
 ### API
 |       参数      |         说明        |    类型  |      默认值    |

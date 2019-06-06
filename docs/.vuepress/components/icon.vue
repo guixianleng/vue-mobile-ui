@@ -1,28 +1,44 @@
 <template>
   <div class="svg-icon">
-    <div class="demo">
-      <h3>基本用法</h3>
-      <div class="svgs">
-        <pl-svg-icon :icon="item" v-for="(item, index) in svgIcons" :key="index" />
+    <card>
+      <div class="demo">
+        <h2>基本用法</h2>
+        <div class="svgs">
+          <pl-svg-icon :icon="item" v-for="(item, index) in svgIcons" :key="index" />
+        </div>
       </div>
-    </div>
-    <div class="demo">
-      <h3>自定义大小</h3>
-      <div class="svgs">
-        <pl-svg-icon icon="empty" size="64"></pl-svg-icon>
-        <pl-svg-icon icon="loading" size="64"></pl-svg-icon>
-        <pl-svg-icon icon="v_loading" size="32"></pl-svg-icon>
-        <pl-svg-icon icon="success" size="48"></pl-svg-icon>
-        <pl-svg-icon icon="fail" size="48"></pl-svg-icon>
-        <pl-svg-icon icon="arrow-d"></pl-svg-icon>
+      <template v-slot:code>
+        <highlight-code lang="vue">
+          {{code1}}
+        </highlight-code>
+      </template>
+    </card>
+    <card>
+      <div class="demo">
+        <h2>自定义大小</h2>
+        <div class="svgs">
+          <pl-svg-icon icon="v_loading" size="32" />
+        </div>
       </div>
-    </div>
-    <div class="demo">
-      <h3>自定义动画</h3>
-      <div class="svgs">
-        <pl-svg-icon icon="v_loading" size="32" animation animation-name="v-loading"></pl-svg-icon>
+      <template v-slot:code>
+        <highlight-code lang="vue">
+          {{code2}}
+        </highlight-code>
+      </template>
+    </card>
+    <card>
+      <div class="demo">
+        <h2>自定义动画</h2>
+        <div class="svgs">
+          <pl-svg-icon icon="v_loading" size="32" animation animation-name="v-loading" />
+        </div>
       </div>
-    </div>
+      <template v-slot:code>
+        <highlight-code lang="vue">
+          {{code3}}
+        </highlight-code>
+      </template>
+    </card>
   </div>
 </template>
 
@@ -33,7 +49,10 @@ export default {
   name: 'svg-icon',
   data () {
     return {
-      svgIcons
+      svgIcons,
+      code1: `<pl-svg-icon icon="done" />`,
+      code2: `<pl-svg-icon icon="v_loading" size="32" />`,
+      code3: `<pl-svg-icon icon="v_loading" size="32" animation animation-name="v-loading" />`
     }
   }
 }

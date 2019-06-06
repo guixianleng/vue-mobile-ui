@@ -1,32 +1,62 @@
 <template>
   <div class="toast">
-    <div class="demo">
-      <h3>文字提示</h3>
-      <van-button type="default" size="small" @click="$vueToast(text)">文字提示</van-button>
-      <van-button type="default" size="small" @click="$vueToast(longText)">长文字提示</van-button>
-    </div>
-    <div class="demo">
-      <h3>颜色文字提示</h3>
-      <van-button type="default" size="small" @click="handleColorful">颜色文字提示</van-button>
-    </div>
-    <div class="demo">
-      <h3>标题和内容文字提示</h3>
-      <van-button type="default" size="small" @click="handleTitle">标题和内容文字提示</van-button>
-    </div>
-    <div class="demo">
-      <h3>加载提示</h3>
-      <h3>加载基本用法</h3>
-      <van-button type="default" size="small" @click="handleLoading1">加载提示</van-button>
-      <h3>自定义遮盖层背景、内容提示背景和图标</h3>
-      <van-button type="default" size="small" @click="handleLoading2">更改内容背景</van-button>
-      <van-button type="default" size="small" @click="handleLoading3">更改加载图标</van-button>
-      <van-button type="default" size="small" @click="handleLoading4">更改遮盖层背景</van-button>
-    </div>
-    <div class="demo">
-      <h3>成功/失败提示</h3>
-      <van-button type="default" size="small" @click="$vueToast.success(successText)">成功提示</van-button>
-      <van-button type="default" size="small" @click="$vueToast.fail(failText)">失败提示</van-button>
-    </div>
+    <card>
+      <div class="demo">
+        <h2>文字提示</h2>
+        <van-button type="default" size="small" @click="$vueToast(text)">文字提示</van-button>
+        <van-button type="default" size="small" @click="$vueToast(longText)">长文字提示</van-button>
+      </div>
+      <template v-slot:code>
+        <highlight-code lang="vue">
+          {{code1}}
+        </highlight-code>
+      </template>
+    </card>
+    <card>
+      <div class="demo">
+        <h2>颜色文字提示</h2>
+        <van-button type="default" size="small" @click="handleColorful">颜色文字提示</van-button>
+      </div>
+      <template v-slot:code>
+        <highlight-code lang="vue">
+          {{code2}}
+        </highlight-code>
+      </template>
+    </card>
+    <card>
+      <div class="demo">
+        <h2>标题和内容文字提示</h2>
+        <van-button type="default" size="small" @click="handleTitle">标题和内容文字提示</van-button>
+      </div>
+      <template v-slot:code>
+        <highlight-code lang="vue">
+          {{code3}}
+        </highlight-code>
+      </template>
+    </card>
+    <card>
+      <div class="demo">
+        <h2>加载提示</h2>
+        <van-button type="default" size="small" @click="handleLoading1">加载提示</van-button>
+      </div>
+      <template v-slot:code>
+        <highlight-code lang="vue">
+          {{code4}}
+        </highlight-code>
+      </template>
+    </card>
+    <card>
+      <div class="demo">
+        <h2>成功/失败提示</h2>
+        <van-button type="default" size="small" @click="$vueToast.success(successText)">成功提示</van-button>
+        <van-button type="default" size="small" @click="$vueToast.fail(failText)">失败提示</van-button>
+      </div>
+      <template v-slot:code>
+        <highlight-code lang="vue">
+          {{code5}}
+        </highlight-code>
+      </template>
+    </card>
   </div>
 </template>
 
@@ -43,7 +73,36 @@ export default {
       text: '提示文案',
       longText: '这是一条长文字提示，超过一定字数就会居中换行',
       successText: '成功文案',
-      failText: '失败文案'
+      failText: '失败文案',
+      code1: `
+        this.$vueToast('提示文案')
+        this.$vueToast('这是一条长文字提示，超过一定字数就会居中换行')
+      `,
+      code2: `
+        this.$vueToast({
+          type: 'loading',
+          isClose: true,
+          bgContent: 'white'
+        })
+      `,
+      code3: `
+        this.$vueToast({
+          type: 'normal',
+          title: '敬请期待',
+          text: '程序猿正在努力开发中'
+        })
+      `,
+      code4: `
+        this.$vueToast({
+          type: 'loading',
+          message: '加载中...',
+          isClose: true
+        })
+      `,
+      code5: `
+        this.$vueToast.success('成功文案')
+        this.$vueToast.fail('失败文案')
+      `
     }
   },
   methods: {

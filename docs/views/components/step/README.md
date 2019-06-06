@@ -1,10 +1,6 @@
-### Step
+### Step 步骤条
 
-#### 实现效果
-
-<demo-code>
-  <Step slot="code" />
-</demo-code>
+<Step />
 
 #### API
 

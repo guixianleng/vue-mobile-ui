@@ -22,7 +22,8 @@ module.exports = {
           'views/components/toast/',
           'views/components/step/',
           'views/components/svg-icon/',
-          'views/components/collapse/'
+          'views/components/collapse/',
+          'views/components/cell/'
         ]
       }
     ]
