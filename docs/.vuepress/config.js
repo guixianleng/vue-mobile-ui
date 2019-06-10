@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  base:'/pl-ui/',
+  base:'/vue-mobile-ui/',
   title: '移动端Ui组件库',
   description: 'This is for Poly',
   head: [
@@ -11,7 +11,7 @@ module.exports = {
     lastUpdated: 'Last Updated', // string | boolean
     nav: [
       { text: '主页', link: '/' },
-      { text: 'Github', link: 'https://github.com/guixianleng/pl-ui/' },
+      { text: 'Github', link: 'https://github.com/guixianleng/vue-mobile-ui/' },
     ],
     sidebar: [
       {
