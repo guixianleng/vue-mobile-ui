@@ -7,7 +7,7 @@
         <van-button type="default" size="small" @click="$vueToast(longText)">长文字提示</van-button>
       </div>
       <template v-slot:code>
-        <highlight-code lang="vue">
+        <highlight-code lang="js">
           {{code1}}
         </highlight-code>
       </template>
@@ -18,7 +18,7 @@
         <van-button type="default" size="small" @click="handleColorful">颜色文字提示</van-button>
       </div>
       <template v-slot:code>
-        <highlight-code lang="vue">
+        <highlight-code lang="js">
           {{code2}}
         </highlight-code>
       </template>
@@ -29,7 +29,7 @@
         <van-button type="default" size="small" @click="handleTitle">标题和内容文字提示</van-button>
       </div>
       <template v-slot:code>
-        <highlight-code lang="vue">
+        <highlight-code lang="js">
           {{code3}}
         </highlight-code>
       </template>
@@ -40,7 +40,7 @@
         <van-button type="default" size="small" @click="handleLoading1">加载提示</van-button>
       </div>
       <template v-slot:code>
-        <highlight-code lang="vue">
+        <highlight-code lang="js">
           {{code4}}
         </highlight-code>
       </template>
@@ -52,7 +52,7 @@
         <van-button type="default" size="small" @click="$vueToast.fail(failText)">失败提示</van-button>
       </div>
       <template v-slot:code>
-        <highlight-code lang="vue">
+        <highlight-code lang="js">
           {{code5}}
         </highlight-code>
       </template>
