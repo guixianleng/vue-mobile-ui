@@ -10,7 +10,8 @@
     "new:comp": "node ./scripts/generateComponent",
     "new:view": "node ./scripts/generateView",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy": "deploy.sh"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -43,6 +44,7 @@
     "vue-highlight.js": "^3.1.0",
     "vue-svgicon": "^3.2.6",
     "vue-template-compiler": "^2.5.21",
+    "vuepress": "^1.0.0",
     "webpack-bundle-analyzer": "^3.3.2"
   }
 }
