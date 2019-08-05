@@ -11,7 +11,7 @@
     "new:view": "node ./scripts/generateView",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "deploy.sh"
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "axios": "^0.18.0",
